@@ -1,0 +1,40 @@
+<%- include('partials/head') %>
+    <%- include('partials/navbar') %>
+
+        <div class="container mt-5">
+            <h3 class="mb-3 text-center">Detail Mahasiswa</h3>
+            <div class="row ">
+                <div class="col-6 mx-auto">
+                    <table class="table table-bordered table-striped table-hover">
+                        <tbody>
+                            <tr>
+                                <th>Nama</th>
+                                <td>
+                                    <%= mhs.nama %>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Umur</th>
+                                <td>
+                                    <%= mhs.umur %>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Pekerjaan</th>
+                                <td>
+                                    <%= mhs.pekerjaan %>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Alamat</th>
+                                <td>
+                                    <%= mhs.alamat %>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <%- include('partials/footer') %>

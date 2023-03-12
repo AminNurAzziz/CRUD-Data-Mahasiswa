@@ -1,0 +1,42 @@
+<%- include('partials/head') %>
+    <%- include('partials/navbar') %>
+
+        <div class="container my-4">
+            <h5 class="mb-4 text-center">Input Data Mahasiswa</h5>
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <form class="border rounded p-3" action="/post-form" method="POST">
+                        <div class="form-group">
+                            <label for="nama">Nama</label>
+                            <input type="text" name="nama" id="nama" class="form-control"
+                                placeholder="Masukkan nama lengkap">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="umur">Umur</label>
+                            <input type="number" name="umur" id="umur" class="form-control" placeholder="Masukkan umur">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pekerjaan">Pekerjaan</label>
+                            <select id="pekerjaan" name="pekerjaan" class="form-control">
+                                <option value="">- Pilih Pekerjaan</option>
+                                <option value="programmer">Programmer</option>
+                                <option value="web-designer">Web Designer</option>
+                                <option value="pengusaha">Pengusaha</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alamat">Alamat</label>
+                            <textarea class="form-control" name="alamat" id="alamat" rows="3"
+                                placeholder="Masukkan alamat lengkap"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <%- include('partials/footer') %>

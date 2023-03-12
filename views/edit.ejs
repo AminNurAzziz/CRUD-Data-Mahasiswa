@@ -1,0 +1,33 @@
+<%- include('partials/head') %>
+    <%- include('partials/navbar') %>
+
+        <h1 class="text-center">Edit Mahasiswa</h1>
+        <section class="col-5 mx-auto">
+            <form action="/edit/<%= mhs._id%>?_method=PATCH" method="POST">
+                <input type="hidden" name="_method" value="PUT">
+
+                <div class="form-group">
+                    <label for="nama">Nama</label>
+                    <input type="text" class="form-control" id="nama" name="nama" value="<%= mhs.nama %>">
+                </div>
+
+                <div class="form-group">
+                    <label for="umur">Umur</label>
+                    <input type="number" class="form-control" id="umur" name="umur" value="<%= mhs.umur %>">
+                </div>
+
+                <div class="form-group">
+                    <label for="pekerjaan">Pekerjaan</label>
+                    <input type="text" class="form-control" id="pekerjaan" name="pekerjaan"
+                        value="<%= mhs.pekerjaan %>">
+                </div>
+
+                <div class="form-group">
+                    <label for="alamat">Alamat</label>
+                    <textarea class="form-control" id="alamat" name="alamat" rows="3"><%= mhs.alamat %></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Save</button>
+            </form>
+        </section>
+        <%- include('partials/footer') %>
